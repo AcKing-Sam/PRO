@@ -361,6 +361,26 @@
     how fast
   </a>
   
+    <nav class="md-nav" aria-label="how fast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    和普通日志对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    架构设计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -372,7 +392,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     无锁编程
   </a>
   
@@ -386,14 +406,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     避免慢速的函数调用
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     压缩信息再解压
   </a>
   
@@ -412,8 +432,49 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    实现原理
+  </a>
+  
+    <nav class="md-nav" aria-label="实现原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    预处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    运行时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    后处理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#source-code-and-paper" class="md-nav__link">
     source code and paper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blog" class="md-nav__link">
+    blog
   </a>
   
 </li>
@@ -573,6 +634,26 @@
     how fast
   </a>
   
+    <nav class="md-nav" aria-label="how fast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    和普通日志对比
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    架构设计
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -584,7 +665,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     无锁编程
   </a>
   
@@ -598,14 +679,14 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     避免慢速的函数调用
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     压缩信息再解压
   </a>
   
@@ -624,8 +705,49 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    实现原理
+  </a>
+  
+    <nav class="md-nav" aria-label="实现原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    预处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    运行时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    后处理
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#source-code-and-paper" class="md-nav__link">
     source code and paper
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blog" class="md-nav__link">
+    blog
   </a>
   
 </li>
@@ -656,25 +778,139 @@
 <p>如上图所示，Nanolog的调用开销中位数为个位数纳秒。其他几款知名开源log的调用则需要耗时几百甚至上千纳秒。<strong>Nanolog的中位数和99.9分位的延迟要比其他的小一到两个数量级。</strong></p>
 <p><img alt="image-20230721141754429" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211417458.png" /></p>
 <p>上图为不同日志库打印吞吐率对比，紫色的为Nanolog，比其它日志系统<strong>每秒吞吐量高几倍到几十倍。</strong></p>
+<h3 id="_1">和普通日志对比<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20230721160355012" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211603042.png" /></p>
+<p><img alt="image-20230721160424185" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211604215.png" /></p>
+<p>图中两个都是日志系统运行时的流程，可以发现，普通日志系统比nanolog多了两个较为耗时的流程：加锁，字符串格式化；NanoLog则是将这两个步骤完全在运行时去除，这也是为什么它比其他日志系统延迟更低，吞吐量更高的重要原因；</p>
+<p>当然，它也有一些缺点：输出的日志文件是压缩格式的，即二进制格式，不方便阅读，需要借助日志解压缩工具(随源码提供)进行解析，不过，对于线上发布后的服务，实时查看日志并不是必需的；</p>
+<h3 id="_2">架构设计<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>NanoLog 能在纳秒尺度打印日志是因为它能够在<strong>编译期间提取静态日志消息</strong>并在<strong>离线阶段处理日志的格式化</strong>等问题。其核心优化都建立在以下两个条件上：</p>
+<ul>
+<li>开发者可直接阅读的格式化日志，不一定要在应用程序运行时直接生成，我们可以在运行期间记录日志的动态参数并在运行后按需生成；</li>
+<li>日志消息中的绝大部分信息都是静态冗余的，只有少数参数会发生变化，我们可以在编译期间获取日志的静态内容并仅在后处理器中打印一次；</li>
+</ul>
 <h2 id="why-fast">why fast<a class="headerlink" href="#why-fast" title="Permanent link">&para;</a></h2>
-<h3 id="_1">无锁编程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20230721142105488" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211622076.png" /></p>
+<ul>
+<li>预处理器：在编译期间从源代码提取日志消息、将原始日志语句替换成优化过的代码并为每条日志消息生成压缩、字典辅助函数；</li>
+<li>运行时库：在缓冲区中缓存多个线程打印的日志并使用预处理阶段生成的辅助函数输出压缩后的二进制日志；</li>
+<li>解码器：利用预处理阶段生成的包含静态信息的字典解码日志，获取可以被人类阅读的日志；</li>
+</ul>
+<p>传统的日志系统都仅包含运行时，我们只需要在开发时引入头文件、链接静态库或者动态库并在代码中指定的位置输出日志，日志系统会程序运行期间将日志打印到标准输出或者指定文件。</p>
+<p>但是 NanoLog 打破了上述这种传统的设计，为了减少运行时的开销，我们将一部分操作迁移到了编译期间和运行后，这也遵循<em>工作质量守恒定律</em>：工作不会凭空消失，它只会从运行时转移到程序生命周期的其他阶段，NanoLog 就使用了下面的操作降低了日志系统的开销：</p>
+<ul>
+<li>在编译时重写了日志语句，移除静态信息并将昂贵的格式化操作推迟到代码运行后的阶段，这能够在运行时减少大量的计算和 I/O 带宽需求；</li>
+<li>为每个日志消息编译了特定代码，能够高效地处理动态参数，避免在运行时解析日志消息并编码参数类型；</li>
+<li>使用轻量级的压缩算法以及不保序的日志减少运行时的 I/O 和处理时间；</li>
+<li>使用后处理组合压缩的日志数据和编译时提取的静态信息生成可读的日志；</li>
+</ul>
+<h3 id="_3">无锁编程<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>目的是降低写延迟。</p>
 <p>这里说的无锁编程是真的<strong>完全没有锁</strong>。而非有的文章中写的将基于CAS锁的编程称为无锁编程。<strong>在低延迟的世界里，CAS锁也是锁。</strong>无锁编程使得任何写线程都能在较确定性的时间内非常快的完成调用，不会因为不同线程竞争资源而卡住不确定的时间。</p>
-<p><img alt="image-20230721142105488" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211421520.png" /></p>
 <p>通过基于GCC内置的线程局部存储设施 <strong>__thread 关键字</strong>，Nanolog为每一个线程创建了一个独立的无锁环形队列，该关键字作用应该是和C++11标准引入的thread_local一致，__thread变量每一个线程有一份独立实体，各个线程的值互不干扰。内存屏蔽是多线程能同步的基础，基于内存屏蔽可以实现无锁队列，<strong>单生产者单消费者可以用一个无锁队列来实现无锁编程</strong>，这个是无锁编程的一个基础，再<strong>通过多个无锁队列就可以做到多生产者单消费者的无锁编程</strong>。这也是低延迟编程必用的技能。</p>
 <h3 id="cache-miss">尽量减少cache miss<a class="headerlink" href="#cache-miss" title="Permanent link">&para;</a></h3>
 <p>低延迟系统要应对的头号敌人就是cache miss，<strong>低延迟系统要尽量避免cache miss</strong>。为了减少队列生产者和消费者多线程造成队列头尾指针判断时的cache miss。生产者端会缓存消费者线程在环形队列中的尾的位置。只有当空间不足时才重新读取一次队尾位置。这样就不会每次写入都可能发生cache miss，而是只有写满一次环形队列时，才会发生一次cache miss。编写多线程低延迟系统时要合理规划结构体的内存布局，按线程对变量的读写情况规划变量定义顺序，尽可能按线程访问顺序定义结构体顺序，同一线程的放一起，<strong>不同线程间会改变的变量中间加一个cache line长度的空间进行分开，避免因false sharing导致cache miss</strong>。比如该项目中的环形队列中作者便放了两条cache line长度的定义进行隔离（参考RuntimeLogger.h中的char cacheLineSpacer[2*Util::BYTES_PER_CACHE_LINE]）。这里为什么不是一倍而是两倍长度，本人也有点费解，有谁了解的希望能指点一二。</p>
-<h3 id="_2">避免慢速的函数调用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h3 id="_4">避免慢速的函数调用<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <p>通过系统接口获取时间就会显得偏慢，Nanolog<strong>采用的是记录系统的tsc寄存器的数值来记录时间</strong>。再将这个数值在日志处理线程中还原成日历时间。这一方法使得日志写线程的时间获取延迟降低为<strong>读寄存器级别</strong>。同样也是低延迟交易系统中必用的技巧。低延迟系统应当尽可能的避免使用慢速接口调用。<strong>比如gettimeofday对低延迟系统来说就是慢速调用，在核心线程中要避免使用</strong>。</p>
 <p>把变量转成字符串这样的格式化转换是一个很耗时的操作，Nanolog把<strong>格式化操作放到副线程</strong>里执行。如果要想实现系统低延迟，就<strong>尽可能的避免在核心线程中出现格式化处理</strong>，比如把数值转成字串，能避免的一律避免。统统放到辅助线程中处理。</p>
-<h3 id="_3">压缩信息再解压<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<h3 id="_5">压缩信息再解压<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p><strong>在某些耗时最大的环节可以通过对信息进行压缩再解压来提升速度</strong>。对于日志系统来说，写文件就是一个瓶颈。但是考虑到大多时候日志不需要实时去看。可以先写入压缩格式的日志文件来降低写入量。在要查看日志时再解压成人眼可读的格式即可。同时有大量静态字符串日志信息是重复不变的，没有必要每次调用都写入相同的静态字符串，只需要记录一次或者预编译时记录。Nanolog提供了两种版本，预编译版本便是在预编译时就进行了处理。<strong>运行时不会重复写入静态字串</strong>，<strong>只写入变量信息，如整形，浮点型字串变量</strong>。并且在写入日志时进行了压缩操作只写入压缩后的二进制信息以提高IO吞吐率。在日志完成后，通过后续解压缩来还原成人眼可读的文本文件。这一思路也是很值得学习的，比如网络传输时，要把异地交易所的信号进行跨网络传输。考虑到CPU处理速度通常远远快于专线的网络传输速度。可以<strong>先将数据先做压缩，收到后解压再使用</strong>。</p>
 <h3 id="improvement">improvement<a class="headerlink" href="#improvement" title="Permanent link">&para;</a></h3>
 <p>提供一个无压缩版本的代码供参考。</p>
 <p>Nanolog压缩的特性使得对于要 <code>tail -f</code> 实时看日志变得不是那么方便。考虑到某些场景只追求调用的低延迟，不追求高吞吐。每次查看log还需要解压的话使用起来就不够方便了。对于这一点，我们可以修改代码，把辅助线程中的压缩存储这步改为直接输出人眼可读的结果。这样的修改不会增加调用的延迟，只是会降低吞吐率。对于不关注吞吐率只关注低延迟的应用可以参考朱大牛修改的直接输出版本，github链接：<a href="https://link.zhihu.com/?target=https%3A//github.com/zwzw1/NanoLog">zwzw1/NanoLog</a></p>
+<h2 id="_6">实现原理<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="_7">预处理<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<p>NanoLog 使用 Python 来实现预处理器，程序的入口在 <a href="https://github.com/PlatformLab/NanoLog/blob/2a94d70f9d1db4da416053b1b926387fa068a59b/preprocessor/parser.py#L577">preprocessor/parser</a> 中，它会扫描用户的源文件、生成元数据文件和修改后的源代码，接下来会将这些修改后的代码编译到 <code>.so</code> 或者 <code>.a</code> 文件中，而不是编译初始的代码。除此之外，预处理器还会读取生成的所有元数据文件、生成 C++ 源代码并编译到 NanoLog 的运行时库和最后的用户程序中：</p>
+<p><img alt="image-20230721162820695" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211628730.png" /></p>
+<p>它会为源代码中的每个 <code>NANO_LOG</code> 生成两条语句，即 <code>record</code> 和 <code>compress</code>，其中前者记录日志中的动态参数，后者压缩记录的数据减少程序的 I/O 时间。</p>
+<p>下面是预处理器生成的 <code>record</code> 函数：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">__syang0__fl__E32374s3237424642lf__s46cc__100__</span><span class="p">(</span><span class="n">NanoLog</span><span class="o">::</span><span class="n">LogLevel</span><span class="w"> </span><span class="n">level</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">fmtStr</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">arg3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">extern</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">uint32_t</span><span class="w"> </span><span class="n">__fmtId__E32374s3237424642lf__s46cc__100__</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">level</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">NanoLog</span><span class="o">::</span><span class="n">getLogLevel</span><span class="p">())</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="k">return</span><span class="p">;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="kt">uint64_t</span><span class="w"> </span><span class="n">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PerfUtils</span><span class="o">::</span><span class="n">Cycles</span><span class="o">::</span><span class="n">rdtsc</span><span class="p">();</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">str0Len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">arg0</span><span class="p">);;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="kt">size_t</span><span class="w"> </span><span class="n">allocSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arg2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arg3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="n">str0Len</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="k">sizeof</span><span class="p">(</span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">Log</span><span class="o">::</span><span class="n">UncompressedEntry</span><span class="p">);</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">Log</span><span class="o">::</span><span class="n">UncompressedEntry</span><span class="w"> </span><span class="o">*</span><span class="n">re</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">Log</span><span class="o">::</span><span class="n">UncompressedEntry</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">RuntimeLogger</span><span class="o">::</span><span class="n">reserveAlloc</span><span class="p">(</span><span class="n">allocSize</span><span class="p">));</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="n">re</span><span class="o">-&gt;</span><span class="n">fmtId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">__fmtId__E32374s3237424642lf__s46cc__100__</span><span class="p">;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="n">re</span><span class="o">-&gt;</span><span class="n">timestamp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">timestamp</span><span class="p">;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="n">re</span><span class="o">-&gt;</span><span class="n">entrySize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint32_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">allocSize</span><span class="p">);</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">re</span><span class="o">-&gt;</span><span class="n">argData</span><span class="p">;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="c1">// Record the non-string arguments</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">Log</span><span class="o">::</span><span class="n">recordPrimitive</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">arg1</span><span class="p">);</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">Log</span><span class="o">::</span><span class="n">recordPrimitive</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">arg2</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">Log</span><span class="o">::</span><span class="n">recordPrimitive</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">arg3</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="c1">// Record the strings (if any) at the end of the entry</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">arg0</span><span class="p">,</span><span class="w"> </span><span class="n">str0Len</span><span class="p">);</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">str0Len</span><span class="p">;</span><span class="o">*</span><span class="p">(</span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">remove_const</span><span class="o">&lt;</span><span class="k">typename</span><span class="w"> </span><span class="nc">std</span><span class="o">::</span><span class="n">remove_pointer</span><span class="o">&lt;</span><span class="k">decltype</span><span class="p">(</span><span class="n">arg0</span><span class="p">)</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">&gt;::</span><span class="n">type</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">buffer</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="c1">// Make the entry visible</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">RuntimeLogger</span><span class="o">::</span><span class="n">finishAlloc</span><span class="p">(</span><span class="n">allocSize</span><span class="p">);</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="p">}</span>
+</code></pre></div>
+<p>每个函数都包含特定的 <code>fmtId</code>，日志的压缩和解压也都会用到这里生成的标识符，上述函数还会为参数分配内存空间并按照顺序调用 <code>recordPrimitive</code> 将所有参数记录到缓冲区中。</p>
+<p>压缩使用的 <code>compress</code> 也遵循类似的逻辑：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kr">inline</span><span class="w"> </span><span class="kt">ssize_t</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">compressArgs__E32374s3237424642lf__s46cc__100__</span><span class="p">(</span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">Log</span><span class="o">::</span><span class="n">UncompressedEntry</span><span class="w"> </span><span class="o">*</span><span class="n">re</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">out</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">originalOutPtr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">out</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="c1">// Allocate nibbles</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="n">BufferUtils</span><span class="o">::</span><span class="n">TwoNibbles</span><span class="w"> </span><span class="o">*</span><span class="n">nib</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">reinterpret_cast</span><span class="o">&lt;</span><span class="n">BufferUtils</span><span class="o">::</span><span class="n">TwoNibbles</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">out</span><span class="p">);</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="n">out</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">re</span><span class="o">-&gt;</span><span class="n">argData</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="c1">// Read back all the primitives</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arg1</span><span class="p">;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg1</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">+=</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">arg2</span><span class="p">;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg2</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">+=</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">arg3</span><span class="p">;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">arg3</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">));</span><span class="w"> </span><span class="n">args</span><span class="w"> </span><span class="o">+=</span><span class="k">sizeof</span><span class="p">(</span><span class="kt">double</span><span class="p">);</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="c1">// Pack all the primitives</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="n">nib</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">BufferUtils</span><span class="o">::</span><span class="n">pack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">arg1</span><span class="p">));</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">nib</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">BufferUtils</span><span class="o">::</span><span class="n">pack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">arg2</span><span class="p">));</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="n">nib</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0x0f</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">uint8_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">BufferUtils</span><span class="o">::</span><span class="n">pack</span><span class="p">(</span><span class="o">&amp;</span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">arg3</span><span class="p">));</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">true</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="c1">// memcpy all the strings without compression</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="kt">size_t</span><span class="w"> </span><span class="n">stringBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">re</span><span class="o">-&gt;</span><span class="n">entrySize</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="k">sizeof</span><span class="p">(</span><span class="n">arg1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arg2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">arg3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">                                            </span><span class="o">-</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">NanoLogInternal</span><span class="o">::</span><span class="n">Log</span><span class="o">::</span><span class="n">UncompressedEntry</span><span class="p">);</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">stringBytes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">            </span><span class="n">memcpy</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="w"> </span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="n">stringBytes</span><span class="p">);</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">            </span><span class="n">out</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">stringBytes</span><span class="p">;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">originalOutPtr</span><span class="p">;</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="p">}</span>
+</code></pre></div>
+<p>日志的记录和压缩函数都是 Python 的预处理器分析源代码生成的，工程师在开始时使用的 <code>NANO_LOG</code> 会被预处理器展开成新的代码，该预处理器与 C++ 的预处理器有非常相似的功能，只是这里需要展开的代码过于复杂，我们很难在 C++ 中使用预处理器实现。</p>
+<h3 id="_8">运行时<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>应用程序静态链接的 NanoLog 运行时会通过线程上的缓冲区解耦记录动态参数的低延时 <code>record</code> 操作和磁盘 I/O 等高延迟操作。线程上的缓冲区会存储 <code>record</code> 方法调用的结果，这些数据对后台的压缩线程也是可见的：</p>
+<p><img alt="image-20230721163240915" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211632944.png" /></p>
+<p>线程上用于暂存数据的缓冲区是程序提升性能的关键，我们要<strong>尽可能满足避免锁竞争和缓存一致性带来的额外开销</strong>，<strong>暂存缓冲区</strong>使用*<em>环形队列和单生产者的消费者模型</em>降低数据的同步开销。</p>
+<p>环形队列是一个连续的、使用固定大小缓存的数据结构，它的头尾是相连的，非常适合缓存数据流，Linux 内核就使用这种数据结构作为 Socket 的读写缓冲区2，而音视频也会使用环形队列暂存刚刚收到还没有被解码的数据。</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">__kfifo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">in</span><span class="p">;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">out</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">mask</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w">    </span><span class="n">esize</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kt">void</span><span class="w">        </span><span class="o">*</span><span class="n">data</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">};</span>
+</code></pre></div>
+<p>运行时不仅通过无锁环形队列提升性能，还需要解决环形队列中的日志消费问题。为了提高后台线程的处理能力，运行时会将日志的组装推迟到后处理并压缩日志数据减少 I/O 高延迟带来的影响。</p>
+<h3 id="_9">后处理<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>后处理器的实现相对比较简单，因为<strong>每条日志都包含特定的标识符，后处理器会根据该标识符在压缩后的日志头中找到编译时生成的相关信息，并根据这些信息展开和解压日志</strong>。</p>
+<p>需要注意的是，因为<strong>在运行期间每个线程都有自己的暂存缓冲区存储日志</strong>，所以 <code>NanoLog</code> 最终打印的日志不能严格保证时间顺序，它只能保证日志输出的顺序在大体上是有序的。</p>
 <h2 id="source-code-and-paper">source code and paper<a class="headerlink" href="#source-code-and-paper" title="Permanent link">&para;</a></h2>
 <p>https://github.com/PlatformLab/NanoLog</p>
 <p>https://www.usenix.org/system/files/conference/atc18/atc18-yang.pdf</p>
+<h2 id="blog">blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h2>
+<p>https://zhuanlan.zhihu.com/p/136208506</p>
 
 
 
