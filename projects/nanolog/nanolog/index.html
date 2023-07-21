@@ -1,0 +1,727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="../../../programming%20languages/c%2B%2B/c%2B%2B_primer/ch1/">
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
+    
+    
+      
+        <title>nanolog - AcKing's Pro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.26e3688c.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nanolog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="AcKing&#39;s Pro" class="md-header__button md-logo" aria-label="AcKing's Pro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AcKing's Pro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              nanolog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_3">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        projects
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../programming%20languages/c%2B%2B/c%2B%2B_primer/ch1/" class="md-tabs__link">
+        programming languages
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../tools/benchmark/how%20to%20use/" class="md-tabs__link">
+        tools
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="AcKing&#39;s Pro" class="md-nav__button md-logo" aria-label="AcKing's Pro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    AcKing's Pro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+          projects
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          projects
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          nanolog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        nanolog
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    intro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-fast" class="md-nav__link">
+    how fast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-fast" class="md-nav__link">
+    why fast
+  </a>
+  
+    <nav class="md-nav" aria-label="why fast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    无锁编程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-miss" class="md-nav__link">
+    尽量减少cache miss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    避免慢速的函数调用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    压缩信息再解压
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    improvement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code-and-paper" class="md-nav__link">
+    source code and paper
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          programming languages
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          programming languages
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../programming%20languages/c%2B%2B/c%2B%2B_primer/ch1/" class="md-nav__link">
+        c++
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tools/benchmark/how%20to%20use/" class="md-nav__link">
+        benchmark
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro" class="md-nav__link">
+    intro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-fast" class="md-nav__link">
+    how fast
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-fast" class="md-nav__link">
+    why fast
+  </a>
+  
+    <nav class="md-nav" aria-label="why fast">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    无锁编程
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cache-miss" class="md-nav__link">
+    尽量减少cache miss
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    避免慢速的函数调用
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    压缩信息再解压
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#improvement" class="md-nav__link">
+    improvement
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-code-and-paper" class="md-nav__link">
+    source code and paper
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nanolog">nanolog<a class="headerlink" href="#nanolog" title="Permanent link">&para;</a></h1>
+<h2 id="intro">intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h2>
+<p><strong>延迟很低吞吐量很高的日志工具，该日志系统较其他常用日志系统延迟低一到两个数量级，吞吐量高一到两个数量级</strong>。</p>
+<p>日志在系统中起到非常重要的debug作用，出core后debug离不开日志的帮助。但是一般的日志又比较慢，对于速度有极致追求的系统，开发人员不得不删除或关闭部分甚至全部日志运行系统，但这样又会导致出bug时难以定位。为了更好的解决这一问题。</p>
+<p>Nanolog在低延迟和高吞吐两方面做了几点精妙的改进。<strong>非常值得对低延迟技术有兴趣的朋友进行深入学习</strong>。</p>
+<h2 id="how-fast">how fast<a class="headerlink" href="#how-fast" title="Permanent link">&para;</a></h2>
+<p>Measured in nanoseconds and each cell represents the 50th / 99.9th tail latencies.</p>
+<p><img alt="image-20230721141626550" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211416605.png" /></p>
+<p>如上图所示，Nanolog的调用开销中位数为个位数纳秒。其他几款知名开源log的调用则需要耗时几百甚至上千纳秒。<strong>Nanolog的中位数和99.9分位的延迟要比其他的小一到两个数量级。</strong></p>
+<p><img alt="image-20230721141754429" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211417458.png" /></p>
+<p>上图为不同日志库打印吞吐率对比，紫色的为Nanolog，比其它日志系统<strong>每秒吞吐量高几倍到几十倍。</strong></p>
+<h2 id="why-fast">why fast<a class="headerlink" href="#why-fast" title="Permanent link">&para;</a></h2>
+<h3 id="_1">无锁编程<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>目的是降低写延迟。</p>
+<p>这里说的无锁编程是真的<strong>完全没有锁</strong>。而非有的文章中写的将基于CAS锁的编程称为无锁编程。<strong>在低延迟的世界里，CAS锁也是锁。</strong>无锁编程使得任何写线程都能在较确定性的时间内非常快的完成调用，不会因为不同线程竞争资源而卡住不确定的时间。</p>
+<p><img alt="image-20230721142105488" src="https://blog-img-acking.oss-cn-beijing.aliyuncs.com/img/202307211421520.png" /></p>
+<p>通过基于GCC内置的线程局部存储设施 <strong>__thread 关键字</strong>，Nanolog为每一个线程创建了一个独立的无锁环形队列，该关键字作用应该是和C++11标准引入的thread_local一致，__thread变量每一个线程有一份独立实体，各个线程的值互不干扰。内存屏蔽是多线程能同步的基础，基于内存屏蔽可以实现无锁队列，<strong>单生产者单消费者可以用一个无锁队列来实现无锁编程</strong>，这个是无锁编程的一个基础，再<strong>通过多个无锁队列就可以做到多生产者单消费者的无锁编程</strong>。这也是低延迟编程必用的技能。</p>
+<h3 id="cache-miss">尽量减少cache miss<a class="headerlink" href="#cache-miss" title="Permanent link">&para;</a></h3>
+<p>低延迟系统要应对的头号敌人就是cache miss，<strong>低延迟系统要尽量避免cache miss</strong>。为了减少队列生产者和消费者多线程造成队列头尾指针判断时的cache miss。生产者端会缓存消费者线程在环形队列中的尾的位置。只有当空间不足时才重新读取一次队尾位置。这样就不会每次写入都可能发生cache miss，而是只有写满一次环形队列时，才会发生一次cache miss。编写多线程低延迟系统时要合理规划结构体的内存布局，按线程对变量的读写情况规划变量定义顺序，尽可能按线程访问顺序定义结构体顺序，同一线程的放一起，<strong>不同线程间会改变的变量中间加一个cache line长度的空间进行分开，避免因false sharing导致cache miss</strong>。比如该项目中的环形队列中作者便放了两条cache line长度的定义进行隔离（参考RuntimeLogger.h中的char cacheLineSpacer[2*Util::BYTES_PER_CACHE_LINE]）。这里为什么不是一倍而是两倍长度，本人也有点费解，有谁了解的希望能指点一二。</p>
+<h3 id="_2">避免慢速的函数调用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>通过系统接口获取时间就会显得偏慢，Nanolog<strong>采用的是记录系统的tsc寄存器的数值来记录时间</strong>。再将这个数值在日志处理线程中还原成日历时间。这一方法使得日志写线程的时间获取延迟降低为<strong>读寄存器级别</strong>。同样也是低延迟交易系统中必用的技巧。低延迟系统应当尽可能的避免使用慢速接口调用。<strong>比如gettimeofday对低延迟系统来说就是慢速调用，在核心线程中要避免使用</strong>。</p>
+<p>把变量转成字符串这样的格式化转换是一个很耗时的操作，Nanolog把<strong>格式化操作放到副线程</strong>里执行。如果要想实现系统低延迟，就<strong>尽可能的避免在核心线程中出现格式化处理</strong>，比如把数值转成字串，能避免的一律避免。统统放到辅助线程中处理。</p>
+<h3 id="_3">压缩信息再解压<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><strong>在某些耗时最大的环节可以通过对信息进行压缩再解压来提升速度</strong>。对于日志系统来说，写文件就是一个瓶颈。但是考虑到大多时候日志不需要实时去看。可以先写入压缩格式的日志文件来降低写入量。在要查看日志时再解压成人眼可读的格式即可。同时有大量静态字符串日志信息是重复不变的，没有必要每次调用都写入相同的静态字符串，只需要记录一次或者预编译时记录。Nanolog提供了两种版本，预编译版本便是在预编译时就进行了处理。<strong>运行时不会重复写入静态字串</strong>，<strong>只写入变量信息，如整形，浮点型字串变量</strong>。并且在写入日志时进行了压缩操作只写入压缩后的二进制信息以提高IO吞吐率。在日志完成后，通过后续解压缩来还原成人眼可读的文本文件。这一思路也是很值得学习的，比如网络传输时，要把异地交易所的信号进行跨网络传输。考虑到CPU处理速度通常远远快于专线的网络传输速度。可以<strong>先将数据先做压缩，收到后解压再使用</strong>。</p>
+<h3 id="improvement">improvement<a class="headerlink" href="#improvement" title="Permanent link">&para;</a></h3>
+<p>提供一个无压缩版本的代码供参考。</p>
+<p>Nanolog压缩的特性使得对于要 <code>tail -f</code> 实时看日志变得不是那么方便。考虑到某些场景只追求调用的低延迟，不追求高吞吐。每次查看log还需要解压的话使用起来就不够方便了。对于这一点，我们可以修改代码，把辅助线程中的压缩存储这步改为直接输出人眼可读的结果。这样的修改不会增加调用的延迟，只是会降低吞吐率。对于不关注吞吐率只关注低延迟的应用可以参考朱大牛修改的直接输出版本，github链接：<a href="https://link.zhihu.com/?target=https%3A//github.com/zwzw1/NanoLog">zwzw1/NanoLog</a></p>
+<h2 id="source-code-and-paper">source code and paper<a class="headerlink" href="#source-code-and-paper" title="Permanent link">&para;</a></h2>
+<p>https://github.com/PlatformLab/NanoLog</p>
+<p>https://www.usenix.org/system/files/conference/atc18/atc18-yang.pdf</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.top", "search.suggest", "search.highlight", "navigation.expand", "search.share"], "search": "../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
